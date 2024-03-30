@@ -1,56 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./pokemon.js" defer></script>
+    <script src="./search.js" defer></script>
     <title>Pokedex</title>
-    <script src="pokemon.js" defer></script>
 </head>
 
 <body>
-    <main class="main">
-        <header class="header-home">
-            <section class="container">
-                <section class="logo-wrapper">
-                    <img src="assets/pokeball.svg" alt="Pokeball">
-                    <h1>Pokedex</h1>
-                </section>
-                <section class="search-wreapper">
-                    <section class="search-wrap">
-                        <img src="assets/search.svg" alt="search icon" class="search-icon">
-                        <input type="text" class="search-input body3-fonts" placeholder="Search" id="search-input">
-                        <img src="assets/cross.svg" alt="=cross-icon" class="search-close-icon" id="search-close-icon">
-                    </section>
-                    <section class="sort-wrapper">
-                        <section class="sort-wrap">
-                            <img src="assets/sorting.svg" alt="sorting" class="sort-icon">
-                        </section>
-                        <section class="filter-wrapper">
-                            <p class="body2-fonts">Sort By</p>
-                            <section class="filter-wrap">
-                                <section>
-                                    <input type="radio" id="number" name="filters" value="number"checked>
-                                    <label for="number" class="body3-fonts">Number</label>
-                                </section>
-                                <section>
-                                    <input type="radio" name="name" id="filters" value="name">
-                                    <label for="name" class="body3-fonts">Name</label>
-                                </section>
-                            </section>
-                        </section>
-                    </section>
-                </section>
+<main class="main">
+      <header class="header home">
+        <section class="container">
+          <section class="logo-wrapper">
+            <img src="./assets/pokeball.svg" alt="pokeball" />
+            <h1>Pokedex</h1>
+          </section>
+          <section class="search-wrapper">
+            <section class="search-wrap">
+              <img
+                src="./assets/search.svg"
+                alt="search icon"
+                class="search-icon"
+              />
+              <input
+                type="text"
+                class="search-input body3-fonts"
+                placeholder="Procurar"
+                id="search-input"
+              />
+              <img
+                src="./assets/cross.svg"
+                alt="cross icon"
+                class="search-close-icon"
+                id="search-close-icon"
+              />
             </section>
-        </header>
-        <section class="pokemon-list">
-            <section class="container">
-                <section class="list-wrapper">
+            <section class="sort-wrapper">
+              <section class="sort-wrap">
+                <img
+                  src="./assets/sorting.svg"
+                  alt="sorting"
+                  class="sort-icon"
+                  id="sort-icon"
+                />
+              </section>
+              <section class="filter-wrapper">
+                <p class="body2-fonts">Procurar por:</p>
+                <section class="filter-wrap">
+                  <section>
+                    <input
+                      type="radio"
+                      id="number"
+                      name="filters"
+                      value="number"
+                      checked
+                    />
+                    <label for="number" class="body3-fonts">Número</label>
+                  </section>
+                  <section>
+                    <input type="radio" id="name" name="filters" value="name" />
+                    <label for="name" class="body3-fonts">Nome</label>
+                  </section>
                 </section>
-                <section class="not-found-message">Pokemon not found!</section>
+              </section>
             </section>
+          </section>
         </section>
+      </header>
+      <section class="pokemon-list">
+        <div class="container">
+          <div class="list-wrapper"></div>
+        </div>
+        <div id="not-found-message">Pokemon não encontrado</div>
+      </section>
     </main>
+    <script src="script.js"></script>
 </body>
-
 </html>
